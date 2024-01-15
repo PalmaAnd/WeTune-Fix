@@ -46,7 +46,7 @@ public class OptimizeSQLSupport {
       }
     }).getPath("wetune/rules.all.txt");
 
-    final List<String> lines = Arrays.stream((new String(path.readAllBytes())).split("\r\n")).toList();
+    final List<String> lines = Arrays.stream((new String(path.readAllBytes())).split("\n")).toList();
     final SubstitutionBank rules = SubstitutionSupport.loadBank(lines);
     final OptimizeStat optimizeStat = optimizeSQL(sqlStr, parser, schema, rules);
     List<String> res = new ArrayList<>();
