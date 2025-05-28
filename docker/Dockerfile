@@ -38,10 +38,7 @@ RUN apt-get install -y wget software-properties-common && \
     ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
 ENV PATH /opt/mssql-tools/bin:$PATH
 
-RUN apt-get install -y git-lfs && git lfs install
-
-RUN rm -rf /var/lib/apt/lists/* && \
-    apt-get clean
+RUN apt-get install -y git sqlite3 git-lfs && git lfs install
 
 #CMD /bin/bash
 CMD ["/usr/bin/tail", "-f", "/dev/null"]
