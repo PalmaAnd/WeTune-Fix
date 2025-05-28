@@ -24,5 +24,5 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-click-to-run/make-db.sh ${calcite} -tag ${tag}
-click-to-run/generate-data.sh ${spes} ${calcite} -tag ${tag}
+click-to-run/make-db.sh ${calcite} -tag ${tag} -target all
+click-to-run/generate-data.sh ${spes} ${calcite} -tag ${tag} -target all
