@@ -20,7 +20,7 @@ repo_dir='/home/root/wetune'
 ######### Clone Repository ################
 docker exec wetune apt-get -y update
 docker exec wetune apt-get -y upgrade
-docker exec wetune git clone https://ipads.se.sjtu.edu.cn:1312/opensource/wetune.git /temp
+docker exec wetune git clone https://github.com/PalmaAnd/WeTune-Fix.git /temp
 docker exec wetune mv /temp/.git /home/root/wetune
 docker exec wetune rm -rf /temp
 docker exec wetune bash -c "cd ${repo_dir} && git reset --hard HEAD"
